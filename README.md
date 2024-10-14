@@ -11,7 +11,6 @@ This project demonstrates a simple **AC to DC converter** circuit that converts 
 - The circuit includes an **LED (D5)**, accompanied by a **current-limiting resistor (R1, 2.2kΩ)**, which indicates when the circuit is powered.
 - A second resistor **(R2, 10kΩ)** is included for additional functionality, potentially for voltage division or a secondary operation within the circuit.
 - The **AC input** is connected via the screw terminals labeled **J1** on the left side of the board, and the **DC output** is available at the screw terminals labeled **J2** on the right side.
-
 ### PCB Design
 
 - The **PCB layout** shows the copper traces that connect the diodes, capacitor, resistors, and LED components.
