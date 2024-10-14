@@ -19,6 +19,9 @@ This project demonstrates a simple **AC to DC converter** circuit that converts 
 - The design uses **through-hole components** for easy assembly.
 - The traces for **ground (GND)** and **positive voltage output (+VE)** are clearly marked to ensure proper wiring during assembly.
 
+<img src ="/images/overlay.png">
+</br>
+<img src ="/images/schematic.png">
 ## Operation
 
 - The circuit accepts an **AC voltage input** and converts it to **DC voltage** through the full-wave rectifier bridge (formed by the four diodes).
