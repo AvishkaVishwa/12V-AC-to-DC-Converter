@@ -18,7 +18,9 @@ This project demonstrates a simple **AC to DC converter** circuit that converts 
 - The **PCB layout** shows the copper traces that connect the diodes, capacitor, resistors, and LED components.
 - The design uses **through-hole components** for easy assembly.
 - The traces for **ground (GND)** and **positive voltage output (+VE)** are clearly marked to ensure proper wiring during assembly.
-
+<img src ="images/upgraded2.png">
+<img src ="images/upgraded.png">
+<img src ="images/upgraded2.1.png">
 <img src ="/images/overlay.png">
 </br>
 <img src ="/images/schematic.png">
