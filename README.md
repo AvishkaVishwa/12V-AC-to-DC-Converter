@@ -1,57 +1,75 @@
-
 # AC to DC Converter Circuit
 
 ## Overview
 
-This project demonstrates a simple **AC to DC converter** circuit that converts an AC voltage input into a smooth DC voltage output. The circuit is based on a full-wave rectifier bridge, filtering components, and an LED indicator for power status.
+This project demonstrates a **230V AC to 12V DC converter** circuit that steps down the high-voltage AC input and provides a stable DC output using a step-down transformer, full-wave rectifier bridge, smoothing capacitor, and a **LM7812 voltage regulator**. The circuit is designed to convert AC mains power into a smooth 12V DC signal for low-voltage applications.
 
 ## Schematic and PCB Layout
 
-- The circuit uses **four diodes (D1, D2, D3, D4)** to form a **full-wave rectifier bridge**, which converts the incoming **AC (Alternating Current)** signal into a **DC (Direct Current)** output.
-- A **capacitor (C1, 1000µF)** acts as a **filter capacitor**, smoothing out the rectified DC signal by reducing any remaining ripple.
-- The circuit includes an **LED (D5)**, accompanied by a **current-limiting resistor (R1, 2.2kΩ)**, which indicates when the circuit is powered.
-- A second resistor **(R2, 10kΩ)** is included for additional functionality, potentially for voltage division or a secondary operation within the circuit.
-- The **AC input** is connected via the screw terminals labeled **J1** on the left side of the board, and the **DC output** is available at the screw terminals labeled **J2** on the right side.
-<img src = "/images/PCB design.png">
+- The circuit begins with a **230V to 12V step-down transformer** to reduce the AC voltage to a more manageable level.
+- A **full-wave rectifier bridge** formed by **four diodes (D1, D2, D3, D4)** converts the 12V AC signal into a **pulsating DC voltage**.
+- A **filter capacitor (C1, 1000µF)** is used to smooth the rectified DC signal, reducing any ripple.
+- A **LM7812 voltage regulator** is then used to regulate the DC output to a steady 12V DC, ensuring stable voltage even with input fluctuations.
+- The circuit includes an **LED indicator (D5)** with a **current-limiting resistor (R1, 2.2kΩ)** to show when the circuit is powered and functioning.
+- The **AC input** is connected via the screw terminals labeled **J1** (AC In), and the **DC output** is available at the screw terminals labeled **J2** (DC Out).
+- Additional resistors such as **R2 (10kΩ)** provide other functionality within the circuit, such as load balancing or voltage division.
+<img src ="/images/AC to  DC with Transformer.png">
+### Upgraded Components:
+- **230V to 12V Step-Down Transformer**: Converts high-voltage mains AC to 12V AC for further processing.
+- **LM7812 Voltage Regulator**: Ensures the output is a stable 12V DC, regardless of fluctuations in the AC input.
+<img src="/images/AC to DC converter with transformer Schmatic.png">
+<img src="/images/Converter with Transformer.png">
 ### PCB Design
 
-- The **PCB layout** shows the copper traces that connect the diodes, capacitor, resistors, and LED components.
-- The design uses **through-hole components** for easy assembly.
-- The traces for **ground (GND)** and **positive voltage output (+VE)** are clearly marked to ensure proper wiring during assembly.
-<img src ="images/upgraded2.png">
-<img src ="images/upgraded.png">
-<img src ="images/upgraded2.1.png">
-<img src ="/images/overlay.png">
-</br>
-<img src ="/images/schematic.png">
+- The **PCB layout** reflects the placement of the transformer, diodes, capacitors, and the voltage regulator.
+- **Through-hole components** are used to simplify assembly and soldering.
+- The copper traces connecting the components are designed to handle the appropriate current, ensuring minimal resistance and optimal performance.
+- **Ground (GND)** and **positive voltage output (+VE)** traces are clearly marked on the PCB to assist in proper wiring.
+
+![PCB Design](images/upgraded2.png)
+![3D PCB View](images/upgraded.png)
+
 ## Operation
 
-- The circuit accepts an **AC voltage input** and converts it to **DC voltage** through the full-wave rectifier bridge (formed by the four diodes).
-- The **filter capacitor (C1)** smooths the rectified output to reduce ripple and provide a cleaner DC signal.
-- The **LED** serves as a **power indicator**, lighting up when the circuit is operational.
+1. The **230V AC input** is connected to the **step-down transformer**, which reduces it to 12V AC.
+2. The **12V AC** is fed into the **full-wave rectifier bridge**, converting it to a pulsating DC signal.
+3. A **filter capacitor** smooths the DC signal to reduce any ripple.
+4. The **LM7812 voltage regulator** further stabilizes the output to provide a steady **12V DC**.
+5. An **LED** indicates the power status, lighting up when the circuit is operating correctly.
 
 ## Features
 
-- **Full-Wave Rectifier**: Converts AC to DC with the help of four diodes.
-- **Ripple Reduction**: The 1000µF capacitor reduces ripple, providing a stable DC output.
-- **LED Power Indicator**: Provides a visual confirmation that the circuit is receiving power and functioning properly.
+- **Step-Down Transformer**: Safely reduces 230V AC mains to 12V AC.
+- **Full-Wave Rectifier**: Converts the 12V AC signal into DC using four diodes.
+- **Voltage Regulation**: The LM7812 ensures a stable 12V DC output even if the input fluctuates.
+- **Ripple Reduction**: The 1000µF capacitor smooths the DC signal by reducing ripple.
+- **LED Power Indicator**: Provides a visual confirmation that the circuit is operational and receiving power.
+- **PCB Layout**: Includes screw terminals for easy connection of AC input and DC output, making assembly and usage straightforward.
 
 ## How to Use
 
-1. Connect the AC input source to the terminals labeled **AC in**.
-2. Attach your DC-powered device to the terminals labeled **DC out**.
-3. When power is supplied, the **LED** will light up, indicating the circuit is functioning.
-4. The output voltage can be measured at the **DC out** terminals to verify the conversion from AC to DC.
+1. **Connect the AC input** (230V AC) to the terminals labeled **AC In**.
+2. **Connect the DC load** (such as a low-voltage device) to the terminals labeled **DC Out**.
+3. Once powered, the **LED** will light up to indicate the circuit is functioning correctly.
+4. Measure the output voltage at the **DC Out** terminals, which should be a stable **12V DC**.
+5. Use the system to power your 12V DC devices efficiently.
 
 ## Components
 
-- **Diodes**: 4 x 1N4007
-- **Capacitor**: 1 x 1000µF
+- **Step-Down Transformer**: 230V to 12V AC
+- **Diodes**: 4 x 1N4007 (for rectification)
+- **Capacitor**: 1 x 1000µF (for smoothing)
+- **Voltage Regulator**: LM7812 (for voltage regulation)
 - **Resistors**:
   - R1: 2.2kΩ (current-limiting resistor for LED)
-  - R2: 10kΩ
-- **LED**: Power indicator
+  - R2: 10kΩ (for additional functionality)
+- **LED**: Power status indicator
 - **Screw Terminals**: 2 x Screw_Terminal_01x02 (for AC input and DC output)
+
+## Upgraded Features
+
+- **Transformer Addition**: The addition of the **230V to 12V step-down transformer** ensures that the circuit can be connected directly to mains power, making it suitable for real-world applications.
+- **Voltage Regulation**: The **LM7812** voltage regulator ensures the output voltage is consistently 12V DC, which is crucial for sensitive electronics that require stable power.
 
 ## License
 
