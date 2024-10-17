@@ -4,7 +4,7 @@
 
 This project demonstrates a **230V AC to 12V DC converter** circuit that steps down the high-voltage AC input and provides a stable DC output using a step-down transformer, full-wave rectifier bridge, smoothing capacitor, and a **LM7812 voltage regulator**. The circuit is designed to convert AC mains power into a smooth 12V DC signal for low-voltage applications.
 ## Simulation with Proteus 
-<img src="/images/Proteus">
+<img src="images/Proteus.png">
 ## Schematic and PCB Layout
 
 - The circuit begins with a **230V to 12V step-down transformer** to reduce the AC voltage to a more manageable level.
