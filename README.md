@@ -72,6 +72,3 @@ This project demonstrates a **230V AC to 12V DC converter** circuit that steps d
 - **Transformer Addition**: The addition of the **230V to 12V step-down transformer** ensures that the circuit can be connected directly to mains power, making it suitable for real-world applications.
 - **Voltage Regulation**: The **LM7812** voltage regulator ensures the output voltage is consistently 12V DC, which is crucial for sensitive electronics that require stable power.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
