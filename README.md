@@ -58,7 +58,7 @@ This project demonstrates a **230V AC to 12V DC converter** circuit that steps d
 ## Components
 
 - **Step-Down Transformer**: 230V to 12V AC
-- **Diodes**: 4 x 1N4007 (for rectification)
+- **Diodes**: 4 x 1N4007 (for rectification) or Bridge Rectifier Module
 - **Capacitor**: 1 x 1000µF (for smoothing)
 - **Voltage Regulator**: LM7812 (for voltage regulation)
 - **Resistors**:
